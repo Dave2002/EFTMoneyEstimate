@@ -36,5 +36,5 @@ while True:
     if len(changes) >= 60:
         print("60 Minit Estimate:",calc60Min(c.getCurent(),changes[len(changes)-60:]))
 
-    print(left,changes)
+
     time.sleep(60)
