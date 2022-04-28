@@ -1,5 +1,6 @@
+import time
+
 import requests
-import csv
 from bs4 import BeautifulSoup
 
 class RequestMaker():
@@ -9,5 +10,9 @@ class RequestMaker():
         self.className = className
 
     def getCurent(self):
-        html = BeautifulSoup(requests.get(self.url).text, 'html.parser')
-        return int(html.find(self.elementType,class_=self.className).text)
+        try:
+            html = BeautifulSoup(requests.get(self.url).text, 'html.parser')
+            return int(html.find(self.elementType, class_=self.className).text)
+        except:
+            time.sleep(15)
+            return self.getCurent()

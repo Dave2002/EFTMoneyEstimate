@@ -1,6 +1,12 @@
 
 def liveCalc(last,div):
-    return (last/div)/60
+    try:
+        return (last/div)/60
+    except:
+        return "error"
 
 def calcCustomMin(last,changes):
-    return (last/(sum(changes)/len(changes)))/60
+    try:
+        return (last/(sum(changes)/len(changes)))/60
+    except:
+        return "error"

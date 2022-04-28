@@ -30,7 +30,7 @@ while True:
     if len(changes) >= 10:
         print("10 Minit Estimate:",calcCustomMin(c.getCurent(),changes[len(changes)-10:]))
     if len(changes) >= 30:
-        print("30 Minit Estimate:",calcCustomMin(c.getCurent(),changes[len(changes)-30]))
+        print("30 Minit Estimate:",calcCustomMin(c.getCurent(),changes[len(changes)-30:]))
     if len(changes) >= 60:
         print("60 Minit Estimate:",calcCustomMin(c.getCurent(),changes[len(changes)-60:]))
     if len(changes) >= 120:
